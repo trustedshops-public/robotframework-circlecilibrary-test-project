@@ -1,0 +1,20 @@
+---
+version: 2.1
+
+workflows:
+  build:
+    jobs:
+      - build-and-test:
+          filters:
+            tags:
+              only: /.*/
+
+jobs:
+  build-and-test: 
+    docker:
+      - image: cimg/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Run test
+          command: ./test.py
