@@ -1,5 +1,9 @@
 ---
 version: 2.1
+parameters:
+  stage:
+    type: string
+    default: "QA"
 
 workflows:
   build:
@@ -13,6 +17,8 @@ jobs:
   build-and-test: 
     docker:
       - image: cimg/python:3.8
+    environment:
+      TEST_STAGE: << pipeline.parameters.stage >>
     steps:
       - checkout
       - run:
