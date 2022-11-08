@@ -2,4 +2,4 @@
 
 # robotframework-circlecilibrary-test-project
 
-This is a test project for the [robotframework-circlecilibrary](https://github.com/trustedshops-public/robotframework-circlecilibrary) extension.
+This project will be build by the unittests run of the [robotframework-circlecilibrary](https://github.com/trustedshops-public/robotframework-circlecilibrary) extension.
